@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card animate__animated animate__fadeIn">
+    <div class="card-body">
+        <h2 class="card-title">{{ internship.title }}</h2>
+        <h4 class="card-subtitle mb-3 text-muted">{{ internship.company }}</h4>
+        <p class="card-text">{{ internship.description }}</p>
+        <p class="card-text"><strong>Location:</strong> {{ internship.location }}</p>
+        <a href="{{ url_for('index') }}" class="btn btn-secondary">Back to Listings</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 class="mb-4 text-center">Post a New Internship</h1>
+<form method="POST" action="{{ url_for('post') }}" class="animate__animated animate__fadeIn">
+    <div class="mb-3">
+        <label for="company" class="form-label">Company Name</label>
+        <input type="text" class="form-control" id="company" name="company" required>
+    </div>
+    <div class="mb-3">
+        <label for="title" class="form-label">Internship Title</label>
+        <input type="text" class="form-control" id="title" name="title" required>
+    </div>
+    <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="location" name="location" required>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Internship Description</label>
+        <textarea class="form-control" id="description" name="description" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Post Internship</button>
+</form>
+{% endblock %}
